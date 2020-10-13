@@ -7,6 +7,9 @@ const styles = StyleSheet.create({
     container:{
         flex: 1
     },
+    textContainer:{
+        flexDirection: "row"
+    },
     rectangle:{
         width: 50,
         height:60,
@@ -14,6 +17,7 @@ const styles = StyleSheet.create({
         borderColor:"red"
     },
     textbox:{
+        marginLeft: 20,
         marginTop:5,
         width:250,
         height:35,
@@ -21,10 +25,12 @@ const styles = StyleSheet.create({
         borderColor:"grey"
     },
     text:{
-
+        flex: 0.3,
     },
     warningtext:{
-
+        flex:0.5,
+        fontSize : 15,
+        color: "red",
     },
     buttonContainer: {
         flexDirection:"row",
