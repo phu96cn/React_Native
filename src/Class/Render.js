@@ -19,13 +19,12 @@ class Render extends Component{
         //<TouchableOpacity >
         return(
                 <View style={styles.container}>
-                    <View style={{marginLeft: 20}}>
-                        <View style={{marginLeft: 20}}>
-                            <Text style={{marginLeft: 20}}>
+                            <Text style={styles.fullName}>
                                 {this.props.item.fullName}
                             </Text>
-                        </View>
-                    </View>
+                            <Text style={styles.phoneNumber}>
+                                {this.props.item.phoneNumber}
+                            </Text>
                 </View>
            // </TouchableOpacity>
         );
@@ -38,13 +37,21 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         marginLeft:16,
         marginRight:16,
-        marginTop: 8,
-        marginBottom: 8,
+        marginTop: 2,
+        marginBottom: 2,
         borderRadius: 5,
         backgroundColor: '#FFF',
         elevation: 2,
         flexWrap: 'wrap',
         justifyContent: 'flex-start',
+    },
+    fullName:{
+        flex: 5,
+        marginLeft:20,
+
+    },
+    phoneNumber:{
+        flex: 5,
     }
 
 })

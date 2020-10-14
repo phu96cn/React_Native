@@ -39,23 +39,25 @@ const styles = StyleSheet.create({
     },
     buttonCance:{
         marginLeft: 20,
-        backgroundColor:'#00CCFF',
+        backgroundColor:'#00CC33',
 		borderRadius:10,
 		borderWidth: 1,
-		borderColor: '#0033CC',
+		borderColor: '#00CC00',
         height: 40,
-        width:80,
+        width:90,
         justifyContent: "center",
+        elevation:5,
     },
     buttonOK:{
         marginLeft: 20,
-        backgroundColor:'#00CCFF',
+        backgroundColor:'#00CC33',
 		borderRadius:10,
 		borderWidth: 1,
-		borderColor: '#0033CC',
+		borderColor: '#00CC00',
 		height: 40,
-        width:80,
-		justifyContent: "center",
+        width:90,
+        justifyContent: "center",
+        elevation:5,
     }
 });
 export default styles;

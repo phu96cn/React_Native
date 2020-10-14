@@ -37,8 +37,8 @@ export default class app extends Component{
 
   onDataAdd(){
     // this.setState({warningName: true})
-      this.setState({emptyName: this.state.fullName.length==0});
-      this.setState({emptyPhone: this.state.phoneNumber.length==0});
+      this.setState({emptyName: !this.state.fullName.trim()});
+      this.setState({emptyPhone: this.state.phoneNumber.trim()});
       var CurenState = this.state.fullName.length==0 
                  || this.state.phoneNumber.length==0;
     if( !CurenState)
@@ -46,6 +46,7 @@ export default class app extends Component{
       Data.push({fullName: this.state.fullName, phoneNumber: this.state.phoneNumber});
       this.setState({addDone: true})
     }
+    alert(Data.length);
   }
 
   onClear = () =>{
