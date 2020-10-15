@@ -37,10 +37,16 @@ export default class app extends Component{
 
   onDataAdd(){
     // this.setState({warningName: true})
+    var regexName = "";
+    var regexPhone =/^[(]{0,1}[0]{1}[0-9]{2}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4,5}$/;
       this.setState({emptyName: !this.state.fullName.trim()});
-      this.setState({emptyPhone: this.state.phoneNumber.trim()});
-      var CurenState = this.state.fullName.length==0 
-                 || this.state.phoneNumber.length==0;
+      this.setState({emptyPhone: !this.state.phoneNumber.trim()});
+    var isPhone = regexPhone.test(this.state.phoneNumber);
+      this.setState({warningPhone: !isPhone})
+    alert(isPhone);
+      var CurenState = !this.state.fullName.trim() 
+                 || !this.state.phoneNumber.trim()
+                 || !isPhone
     if( !CurenState)
     {
       Data.push({fullName: this.state.fullName, phoneNumber: this.state.phoneNumber});
